@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { Instagram, Github, Code2, Mail, Briefcase, GraduationCap, Sparkles, ArrowDown } from 'lucide-react';
+import { Instagram, Github,Building, Code2, Mail, Briefcase, GraduationCap, Sparkles, ArrowDown, Zap } from 'lucide-react';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,23 +25,61 @@ export default function Home() {
     'Git', 'Responsive Design', 'UI/UX', 'Web Development'
   ];
 
+  // --- UPDATED PROJECTS ARRAY WITH DIGITAL CLOCK AND LINKS ---
   const projects = [
     {
-      title: 'Modern E-Commerce Platform',
-      description: 'A full-featured online shopping platform with cart functionality, payment integration, and admin dashboard.',
-      tech: ['Next.js', 'React', 'Tailwind CSS']
+  title: 'Digital Clock',
+  description: 'A simple, minimalist digital clock web application, providing accurate time in a clean interface. Made with Next.js and Tailwind CSS.',
+  tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+  link: 'https://digital-clock-87a.vercel.app/',
+  image: '/project1.jpg' // put your image here (or a full URL)
+},
+   {
+  title: 'Cinema Booking System',
+  description: 'A web application for booking movie tickets, featuring a user-friendly interface and real-time seat selection. Built with Next.js and Tailwind CSS.',
+  tech: ['Next.js', 'TypeScript', 'Tailwind CSS','Node.js', 'Express', 'MongoDB'],
+  link: 'https://siddiqui-cineplex-cinema.vercel.app/',
+  image: '/project2.jpg' // put your image here (or a full URL)
+},
+  {
+  title: 'Student Entry Management System',
+  description: 'A web application for managing student entries, featuring a user-friendly interface and real-time data processing with database. Built with Next.js and Tailwind CSS.',
+  tech: ['Next.js', 'TypeScript', 'Tailwind CSS','Node.js', 'Express', 'MongoDB'],
+  link: 'https://siddiqui-cineplex-cinema.vercel.app/',
+  image: '/project3.jpg' // put your image here (or a full URL)
+},
+
+
+  ];
+
+  const experience = [
+    {
+      title: 'Freelance Web Developer',
+      company: 'Self-Employed',
+      duration: '2023 - Present',
+      description: 'Developing and deploying custom websites and web applications for small businesses and individuals, focusing on modern stacks like Next.js and Tailwind CSS.',
+      icon: Briefcase,
+      color: 'blue'
     },
     {
-      title: 'Portfolio Management System',
-      description: 'Dynamic portfolio builder with CMS capabilities allowing users to create and customize their portfolios.',
-      tech: ['React', 'TypeScript', 'Node.js']
+      title: 'BSCS Student',
+      company: 'The University of Faisalabad',
+      duration: '2024 - Present',
+      description: 'Currently pursuing a Bachelor of Science in Computer Science, mastering core concepts in algorithms, data structures, and software engineering principles.',
+      icon: GraduationCap,
+      color: 'cyan'
     },
     {
-      title: 'Real-time Chat Application',
-      description: 'Modern chat app with real-time messaging, file sharing, and group chat functionality.',
-      tech: ['Next.js', 'WebSockets', 'Supabase']
+      title: 'Frontend Developer Intern',
+      company: 'White\'s Technologies',
+      duration: '2024 - Present',
+      description: 'Actively contributing to various open-source projects, gaining experience in collaborative development, code review, and maintenance.',
+      icon: Building,
+      color: 'teal'
     }
   ];
+  // ----------------------------------------
+
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
@@ -55,6 +93,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-6">
             <a href="#about" className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors hidden sm:block">About</a>
+            <a href="#experience" className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors hidden sm:block">Experience</a>
             <a href="#projects" className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors hidden sm:block">Projects</a>
             <a href="#contact" className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors hidden sm:block">Contact</a>
             <ThemeToggle />
@@ -62,6 +101,7 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* --- HERO SECTION --- */}
       <section className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-in fade-in slide-in-from-left duration-700">
@@ -93,15 +133,15 @@ export default function Home() {
                 <Instagram className="w-5 h-5" />
               </a>
            <a
-  href="https://wa.me/923146463369" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="p-4 rounded-full bg-white dark:bg-slate-800 hover:bg-green-100 dark:hover:bg-green-950 hover:scale-110 transition-all shadow-lg"
->
-  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12.004 2.002c-5.52 0-10 4.478-10 10 0 1.768.465 3.49 1.352 5.012L2 22l5.107-1.333A9.937 9.937 0 0 0 12.004 22c5.522 0 10-4.478 10-10s-4.478-9.998-10-9.998zm0 18.285a8.266 8.266 0 0 1-4.209-1.157l-.301-.179-3.033.791.808-2.96-.196-.304A8.274 8.274 0 0 1 3.718 12c0-4.565 3.72-8.285 8.286-8.285S20.29 7.435 20.29 12c0 4.566-3.72 8.287-8.286 8.287zm4.768-6.225c-.262-.131-1.553-.767-1.794-.853-.24-.088-.415-.131-.591.13-.174.26-.678.853-.831 1.026-.154.174-.308.196-.57.065-.262-.13-1.106-.407-2.106-1.297-.778-.692-1.303-1.547-1.456-1.809-.153-.261-.017-.403.115-.533.118-.117.262-.308.393-.462.13-.153.174-.262.262-.437.087-.174.043-.327-.022-.458-.065-.13-.591-1.427-.81-1.954-.213-.51-.43-.44-.591-.448h-.505c-.174 0-.458.065-.698.327-.24.26-.915.893-.915 2.176 0 1.283.936 2.521 1.067 2.697.13.174 1.843 2.812 4.47 3.938.625.27 1.111.431 1.49.552.625.199 1.194.17 1.644.103.5-.074 1.553-.635 1.774-1.25.218-.61.218-1.131.153-1.25-.064-.119-.24-.186-.502-.317z"/>
-  </svg>
-</a>
+              href="https://wa.me/923146463369" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-green-100 dark:hover:bg-green-950 hover:scale-110 transition-all"
+           >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                 <path d="M12.004 2.002c-5.52 0-10 4.478-10 10 0 1.768.465 3.49 1.352 5.012L2 22l5.107-1.333A9.937 9.937 0 0 0 12.004 22c5.522 0 10-4.478 10-10s-4.478-9.998-10-9.998zm0 18.285a8.266 8.266 0 0 1-4.209-1.157l-.301-.179-3.033.791.808-2.96-.196-.304A8.274 8.274 0 0 1 3.718 12c0-4.565 3.72-8.285 8.286-8.285S20.29 7.435 20.29 12c0 4.566-3.72 8.287-8.286 8.287zm4.768-6.225c-.262-.131-1.553-.767-1.794-.853-.24-.088-.415-.131-.591.13-.174.26-.678.853-.831 1.026-.154.174-.308.196-.57.065-.262-.13-1.106-.407-2.106-1.297-.778-.692-1.303-1.547-1.456-1.809-.153-.261-.017-.403.115-.533.118-.117.262-.308.393-.462.13-.153.174-.262.262-.437.087-.174.043-.327-.022-.458-.065-.13-.591-1.427-.81-1.954-.213-.51-.43-.44-.591-.448h-.505c-.174 0-.458.065-.698.327-.24.26-.915.893-.915 2.176 0 1.283.936 2.521 1.067 2.697.13.174 1.843 2.812 4.47 3.938.625.27 1.111.431 1.49.552.625.199 1.194.17 1.644.103.5-.074 1.553-.635 1.774-1.25.218-.61.218-1.131.153-1.25-.064-.119-.24-.186-.502-.317z"/>
+              </svg>
+           </a>
 
             </div>
           </div>
@@ -125,6 +165,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------------------------------------------------- */}
+
+      {/* --- ABOUT & SKILLS SECTION --- */}
       <section id="about" className="py-24 px-6 bg-white dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -163,7 +206,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Experience</h3>
-                  <p className="text-slate-600 dark:text-slate-400 font-medium">Web Developer</p>
+                  <p className="text-slate-600 dark:text-slate-400 font-medium">Web Developer (Freelance)</p>
                   <p className="text-slate-500 dark:text-slate-500">Creating Beautiful & Functional Websites</p>
                 </div>
               </div>
@@ -186,8 +229,74 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* ---------------------------------------------------- */}
 
-      <section id="projects" className="py-24 px-6">
+      {/* --- EXPERIENCE TIMELINE SECTION --- */}
+      <section id="experience" className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300 border-blue-200 dark:border-blue-800">
+              Work & Education
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              My{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                Journey
+              </span>
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              A brief overview of my professional and educational background.
+            </p>
+          </div>
+          
+          <div className="relative">
+            {/* Timeline Vertical Line */}
+            <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
+
+            {experience.map((item, index) => {
+              const IconComponent = item.icon;
+              const colorClass = item.color === 'blue' ? 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-950 border-blue-400' :
+                                 item.color === 'cyan' ? 'text-cyan-600 bg-cyan-100 dark:text-cyan-400 dark:bg-cyan-950 border-cyan-400' :
+                                 'text-teal-600 bg-teal-100 dark:text-teal-400 dark:bg-teal-950 border-teal-400';
+              
+              return (
+                <div key={index} className="mb-10 flex items-start group relative">
+                  {/* Circle Icon */}
+                  <div className="flex-shrink-0 relative z-10 sm:mr-6 mr-3">
+                    <div className={`w-6 h-6 rounded-full border-2 ${colorClass} flex items-center justify-center transition-all group-hover:scale-125`}>
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+                  </div>
+                  
+                  {/* Content Card */}
+                  <Card className="p-6 flex-1 border-2 group-hover:border-blue-300 dark:group-hover:border-blue-700 transition-all group-hover:shadow-xl">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                      <span className="text-sm font-medium text-slate-500 dark:text-slate-400 whitespace-nowrap">{item.duration}</span>
+                    </div>
+                    <p className="font-medium text-slate-600 dark:text-slate-300 mb-2">{item.company}</p>
+                    <p className="text-slate-700 dark:text-slate-400">{item.description}</p>
+                  </Card>
+                </div>
+              );
+            })}
+            
+            {/* Final Icon (Optional: for a sense of completion) */}
+            <div className="flex-shrink-0 relative z-10 left-3 mt-1 sm:left-3 sm:mt-0">
+                <div className={`w-6 h-6 rounded-full border-2 text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-950 border-yellow-400 flex items-center justify-center`}>
+                    <Zap className="w-4 h-4" />
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      {/* ---------------------------------------------------- */}
+
+      {/* --- PROJECTS SECTION --- */}
+      <section id="projects" className="py-24 px-6 bg-white dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-teal-100 text-teal-700 dark:bg-teal-950 dark:text-teal-300 border-teal-200 dark:border-teal-800">
@@ -206,32 +315,57 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="group p-6 border-2 hover:border-blue-300 dark:hover:border-blue-700 transition-all hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-              >
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-950 dark:to-cyan-950 rounded-lg mb-6 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <Code2 className="w-16 h-16 text-blue-600 dark:text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, i) => (
-                    <Badge key={i} variant="outline" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </Card>
+              // --- UPDATED: WRAP CARD IN ANCHOR TAG FOR CLICKABLE LINK ---
+           <a 
+  key={index}
+  href={project.link} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="block"
+>
+  <Card
+    className="group p-6 border-2 hover:border-blue-300 dark:hover:border-blue-700 transition-all hover:shadow-2xl hover:-translate-y-2 cursor-pointer h-full"
+  >
+    {/* Project Image */}
+    <div className="h-48 rounded-lg mb-6 overflow-hidden">
+      <img
+        src={project.image}
+        alt={`${project.title} preview`}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
+    </div>
+
+    {/* Title */}
+    <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+      {project.title}
+    </h3>
+
+    {/* Description */}
+    <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+      {project.description}
+    </p>
+
+    {/* Tech Stack */}
+    <div className="flex flex-wrap gap-2">
+      {project.tech.map((tech, i) => (
+        <Badge key={i} variant="outline" className="text-xs">
+          {tech}
+        </Badge>
+      ))}
+    </div>
+  </Card>
+</a>
+
+              // -------------------------------------------------------------
             ))}
           </div>
         </div>
       </section>
 
+      {/* ---------------------------------------------------- */}
+
+      {/* --- CONTACT SECTION --- */}
       <section id="contact" className="py-24 px-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-900 dark:to-slate-950">
         <div className="max-w-4xl mx-auto text-center">
           <Badge className="mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300 border-blue-200 dark:border-blue-800">
@@ -270,20 +404,21 @@ export default function Home() {
               <Instagram className="w-6 h-6" />
             </a>
            <a
-  href="https://wa.me/923146463269" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="p-4 rounded-full bg-white dark:bg-slate-800 hover:bg-green-100 dark:hover:bg-green-950 hover:scale-110 transition-all shadow-lg"
->
-  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12.004 2.002c-5.52 0-10 4.478-10 10 0 1.768.465 3.49 1.352 5.012L2 22l5.107-1.333A9.937 9.937 0 0 0 12.004 22c5.522 0 10-4.478 10-10s-4.478-9.998-10-9.998zm0 18.285a8.266 8.266 0 0 1-4.209-1.157l-.301-.179-3.033.791.808-2.96-.196-.304A8.274 8.274 0 0 1 3.718 12c0-4.565 3.72-8.285 8.286-8.285S20.29 7.435 20.29 12c0 4.566-3.72 8.287-8.286 8.287zm4.768-6.225c-.262-.131-1.553-.767-1.794-.853-.24-.088-.415-.131-.591.13-.174.26-.678.853-.831 1.026-.154.174-.308.196-.57.065-.262-.13-1.106-.407-2.106-1.297-.778-.692-1.303-1.547-1.456-1.809-.153-.261-.017-.403.115-.533.118-.117.262-.308.393-.462.13-.153.174-.262.262-.437.087-.174.043-.327-.022-.458-.065-.13-.591-1.427-.81-1.954-.213-.51-.43-.44-.591-.448h-.505c-.174 0-.458.065-.698.327-.24.26-.915.893-.915 2.176 0 1.283.936 2.521 1.067 2.697.13.174 1.843 2.812 4.47 3.938.625.27 1.111.431 1.49.552.625.199 1.194.17 1.644.103.5-.074 1.553-.635 1.774-1.25.218-.61.218-1.131.153-1.25-.064-.119-.24-.186-.502-.317z"/>
-  </svg>
-</a>
+              href="https://wa.me/923146463269" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-4 rounded-full bg-white dark:bg-slate-800 hover:bg-green-100 dark:hover:bg-green-950 hover:scale-110 transition-all shadow-lg"
+           >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                 <path d="M12.004 2.002c-5.52 0-10 4.478-10 10 0 1.768.465 3.49 1.352 5.012L2 22l5.107-1.333A9.937 9.937 0 0 0 12.004 22c5.522 0 10-4.478 10-10s-4.478-9.998-10-9.998zm0 18.285a8.266 8.266 0 0 1-4.209-1.157l-.301-.179-3.033.791.808-2.96-.196-.304A8.274 8.274 0 0 1 3.718 12c0-4.565 3.72-8.285 8.286-8.285S20.29 7.435 20.29 12c0 4.566-3.72 8.287-8.286 8.287zm4.768-6.225c-.262-.131-1.553-.767-1.794-.853-.24-.088-.415-.131-.591.13-.174.26-.678.853-.831 1.026-.154.174-.308.196-.57.065-.262-.13-1.106-.407-2.106-1.297-.778-.692-1.303-1.547-1.456-1.809-.153-.261-.017-.403.115-.533.118-.117.262-.308.393-.462.13-.153.174-.262.262-.437.087-.174.043-.327-.022-.458-.065-.13-.591-1.427-.81-1.954-.213-.51-.43-.44-.591-.448h-.505c-.174 0-.458.065-.698.327-.24.26-.915.893-.915 2.176 0 1.283.936 2.521 1.067 2.697.13.174 1.843 2.812 4.47 3.938.625.27 1.111.431 1.49.552.625.199 1.194.17 1.644.103.5-.074 1.553-.635 1.774-1.25.218-.61.218-1.131.153-1.25-.064-.119-.24-.186-.502-.317z"/>
+              </svg>
+           </a>
 
           </div>
         </div>
       </section>
 
+      {/* --- FOOTER --- */}
       <footer className="py-8 px-6 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto text-center text-slate-600 dark:text-slate-400">
           <p className="mb-2">© 2025 Muhammad Abdullah Siddiqui. All rights reserved.</p>
