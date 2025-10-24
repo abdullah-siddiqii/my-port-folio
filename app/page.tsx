@@ -10,6 +10,8 @@ import Script from 'next/script';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Instagram, Github,Building, Code2, Mail, Briefcase, GraduationCap, Sparkles, ArrowDown, Zap } from 'lucide-react';
 
+
+export default function Home() {
 <Script
   id="tawk-to"
   strategy="afterInteractive"
@@ -27,8 +29,6 @@ import { Instagram, Github,Building, Code2, Mail, Briefcase, GraduationCap, Spar
     `,
   }}
 />
-
-export default function Home() {
   // <!--Start of Tawk.to Script-->
 // <!--End of Tawk.to Script-->
   const [scrolled, setScrolled] = useState(false);
