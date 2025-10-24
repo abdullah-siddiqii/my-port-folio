@@ -5,10 +5,32 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import Script from 'next/script';
+
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Instagram, Github,Building, Code2, Mail, Briefcase, GraduationCap, Sparkles, ArrowDown, Zap } from 'lucide-react';
 
+<Script
+  id="tawk-to"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/68fb8cfdcfefaf195179e461/1j8b9tg4g';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+      })();
+    `,
+  }}
+/>
+
 export default function Home() {
+  // <!--Start of Tawk.to Script-->
+// <!--End of Tawk.to Script-->
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
