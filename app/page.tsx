@@ -12,23 +12,6 @@ import { Instagram, Github,Building, Code2, Mail, Briefcase, GraduationCap, Spar
 
 
 export default function Home() {
-<Script
-  id="tawk-to"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/68fb8cfdcfefaf195179e461/1j8b9tg4g';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-      })();
-    `,
-  }}
-/>
   // <!--Start of Tawk.to Script-->
 // <!--End of Tawk.to Script-->
   const [scrolled, setScrolled] = useState(false);
@@ -57,21 +40,21 @@ export default function Home() {
   image: '/project1.jpg' // put your image here (or a full URL)
 },
    {
-  title: 'Cinema Booking System',
-  description: 'A web application for booking movie tickets, featuring a user-friendly interface and real-time seat selection. Built with Next.js and Tailwind CSS.',
-  tech: ['Next.js', 'TypeScript', 'Tailwind CSS','Node.js', 'Express', 'MongoDB'],
-  link: 'https://siddiqui-cineplex-cinema.vercel.app/',
-  image: '/project2.jpg' // put your image here (or a full URL)
-},
-  {
-  title: 'Student Entry Management System',
-  description: 'A web application for managing student entries, featuring a user-friendly interface and real-time data processing with database. Built with Next.js and Tailwind CSS.',
-  tech: ['Next.js', 'TypeScript', 'Tailwind CSS','Node.js', 'Express', 'MongoDB'],
-  link: 'https://student-entry-front.vercel.app/',
-  image: '/project3.jpg' // put your image here (or a full URL)
-},
-
-
+     title: 'Cinema Booking System',
+     description: 'A web application for booking movie tickets, featuring a user-friendly interface and real-time seat selection. Built with Next.js and Tailwind CSS.',
+     tech: ['Next.js', 'TypeScript', 'Tailwind CSS','Node.js', 'Express', 'MongoDB'],
+     link: 'https://siddiqui-cineplex-cinema.vercel.app/',
+     image: '/project2.jpg' // put your image here (or a full URL)
+    },
+    {
+      title: 'Student Entry Management System',
+      description: 'A web application for managing student entries, featuring a user-friendly interface and real-time data processing with database. Built with Next.js and Tailwind CSS.',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS','Node.js', 'Express', 'MongoDB'],
+      link: 'https://student-entry-front.vercel.app/',
+      image: '/project3.jpg' // put your image here (or a full URL)
+    },
+    
+    
   ];
 
   const experience = [
@@ -101,8 +84,8 @@ export default function Home() {
     }
   ];
   // ----------------------------------------
-
-
+  
+  
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
@@ -301,7 +284,7 @@ href="https://github.com/abdullah-siddiqii"
                   key={index}
                   variant="secondary"
                   className="px-4 py-2 text-sm font-medium hover:scale-110 transition-transform cursor-default bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 border border-blue-200 dark:border-blue-800"
-                >
+                  >
                   {skill}
                 </Badge>
               ))}
@@ -337,8 +320,8 @@ href="https://github.com/abdullah-siddiqii"
             {experience.map((item, index) => {
               const IconComponent = item.icon;
               const colorClass = item.color === 'blue' ? 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-950 border-blue-400' :
-                                 item.color === 'cyan' ? 'text-cyan-600 bg-cyan-100 dark:text-cyan-400 dark:bg-cyan-950 border-cyan-400' :
-                                 'text-teal-600 bg-teal-100 dark:text-teal-400 dark:bg-teal-950 border-teal-400';
+              item.color === 'cyan' ? 'text-cyan-600 bg-cyan-100 dark:text-cyan-400 dark:bg-cyan-950 border-cyan-400' :
+              'text-teal-600 bg-teal-100 dark:text-teal-400 dark:bg-teal-950 border-teal-400';
               
               return (
                 <div key={index} className="mb-10 flex items-start group relative">
@@ -396,13 +379,13 @@ href="https://github.com/abdullah-siddiqii"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               // --- UPDATED: WRAP CARD IN ANCHOR TAG FOR CLICKABLE LINK ---
-           <a 
-  key={index}
-  href={project.link} 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="block"
->
+              <a 
+              key={index}
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+              >
   <Card
     className="group p-6 border-2 hover:border-blue-300 dark:hover:border-blue-700 transition-all hover:shadow-2xl hover:-translate-y-2 cursor-pointer h-full"
   >
@@ -545,6 +528,23 @@ href="https://github.com/abdullah-siddiqii"
           <p className="mb-2">© 2025 Muhammad Abdullah Siddiqui. All rights reserved.</p>
         </div>
       </footer>
+<Script
+  id="tawk-to"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/68fb8cfdcfefaf195179e461/1j8b9tg4g';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+      })();
+    `,
+  }}
+/>
     </main>
   );
 }
