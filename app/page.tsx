@@ -1012,7 +1012,7 @@ export default function Home() {
             {/* --- FOOTER --- */}
             <footer className="py-8 text-center border-t border-slate-200 dark:border-slate-800">
                 <p className="text-sm text-slate-500 dark:text-slate-400">
-                    &copy; Made by Muhammad Abdullah Siddiqui. All rights reserved.
+                    &copy; Developed by Muhammad Abdullah Siddiqui. All rights reserved.
                 </p>
                 <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
                     Built with <span className="text-red-500">❤️</span> using Next.js, Tailwind CSS, and Framer Motion.
